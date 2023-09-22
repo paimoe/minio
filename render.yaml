@@ -1,6 +1,7 @@
 services:
 - type: web
   name: minio-server
+  region: frankfurt
   healthCheckPath: /minio/health/live
   runtime: image
   image:
@@ -19,6 +20,7 @@ services:
     value: "off"
 - type: web
   name: minio-console
+  region: frankfurt
   runtime: image
   image:
     url: minio/console:v0.30.0
